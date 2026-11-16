@@ -4,7 +4,7 @@ from src.checkout import calculate_delivery_fee
 @pytest.mark.parametrize(
     ("order_total", "distance_km", "expected_fee"),
     [
-        (20, 3, 3.99),  # up to 5 km
+        (20, 3, 3.90),  # up to 5 km  # Shania purposely make test fail
         (20, 8, 5.99),  # up to 10 km
         (50, 3, 0.0),  # free delivery for orders of $50 or more
         (20, 15, 8.99),  # above 10 km
