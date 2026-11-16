@@ -8,5 +8,5 @@ jobs:
 
     steps:
       - name: Say Hello
-      - run: echo "Hello, Github Actions"
+        run: echo "Hello, Github Actions"
         
