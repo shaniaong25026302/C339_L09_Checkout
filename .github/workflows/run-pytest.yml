@@ -1,0 +1,27 @@
+# Name of the GitHub Actions workflow
+# This name appears under the Actions tab in GitHub
+name: Run pytest
+
+# Trigger the workflow whenever code is pushed to the repository
+on: push
+
+# Define the jobs that the workflow will execute
+jobs:
+  # Job ID: test
+  test:
+    # Run the job on a GitHub-hosted Ubuntu (Linux) runner
+    runs-on: ubuntu-latest
+
+    # Steps are executed sequentially (top to bottom)
+    steps:
+      # Step 1: Download the repository's code onto the runner
+      # This allows the runner to access the project files
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Install and configure Python on the runner
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          # Specify the Python version used by the workflow
+          python-version: "3.12"
