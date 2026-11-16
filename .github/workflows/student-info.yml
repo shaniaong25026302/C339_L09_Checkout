@@ -1,0 +1,19 @@
+name: Student Information
+
+on: push
+
+jobs:
+  student:
+    runs-on: ubuntu-latest 
+
+    steps: # Steps should align with runs on
+
+       - name: Display Student Name
+         run: echo "Display Student - Shania Ong"
+        
+       - name: Display Module
+         run: echo "Display Module - C339 Software Testing and Analytics"
+
+       - name: Display Message
+         run: echo "Display My GitHub Actions workflow is running automatically"
+
